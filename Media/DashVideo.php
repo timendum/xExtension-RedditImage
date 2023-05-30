@@ -18,7 +18,9 @@ class DashVideo implements DomElementInterface {
         $script->appendChild($finalDom->createTextNode(<<<EOT
 if (!window.dashjs) {
     const script = document.createElement("script");
-    script.setAttribute("src", "http://cdn.dashjs.org/v4.7.0/dash.all.min.js");
+    script.setAttribute("src", "https://cdn.dashjs.org/v4.7.0/dash.all.min.js");
+    script.setAttribute("integrity", "sha384-mfpHUq3Gmz+etIo4BedSDJvuHMa3pirLq/a8pXPVLyWT989ipWTgegXJ9kkh8ZrN");
+    script.setAttribute("crossorigin", "anonymous");
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 EOT;));
